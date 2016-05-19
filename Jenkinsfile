@@ -20,6 +20,7 @@ node('node') {
 
     stage 'Test'
       print "Testing goes here."
+  }
 
   catch (caughtError) {
     err = caughtError
