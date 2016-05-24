@@ -1,7 +1,8 @@
 ---
 - name: myubuntu
   hosts: all
-  sudo: yes
+  become: true
+  become_method: sudo
 
   tasks:
     - name: install packages
