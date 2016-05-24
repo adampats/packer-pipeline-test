@@ -12,8 +12,7 @@ node {
     stage 'Validate'
       def packer_file = 'packer.json'
       print "Running packer validate on : ${packer_file}"
-      sh 'packer -v'
-      sh "packer validate ${packer_file}"
+      sh "packer -v ; packer validate ${packer_file}"
 
     stage 'Build'
       sh "packer build ${packer_file}"
